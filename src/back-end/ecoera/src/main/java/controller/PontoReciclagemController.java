@@ -1,4 +1,4 @@
-package controller;
+package com.ecoera.controller;
 
 import com.ecoera.model.PontoReciclagem;
 import com.ecoera.service.PontoReciclagemService;

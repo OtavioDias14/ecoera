@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import AppRoutes from './routes/AppRoutes'
+import ErrorBoundary from './ErrorBoundary'
 
 // Importar o bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -10,6 +11,8 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AppRoutes/>
+    <ErrorBoundary>
+      <AppRoutes />
+    </ErrorBoundary>
   </StrictMode>,
 )
