@@ -1,7 +1,9 @@
-package com.ecoera.service;
+package service;
 
-import com.ecoera.model.TipoMaterial;
-import com.ecoera.repository.TipoMaterialRepository;
+import model.TipoMaterial;
+
+import repository.TipoMaterialRepository;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;

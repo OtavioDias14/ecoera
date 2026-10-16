@@ -1,7 +1,9 @@
-package com.ecoera.controller;
+package controller;
 
-import com.ecoera.model.PontoReciclagem;
-import com.ecoera.service.PontoReciclagemService;
+import model.PontoReciclagem;
+
+import service.PontoReciclagemService;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

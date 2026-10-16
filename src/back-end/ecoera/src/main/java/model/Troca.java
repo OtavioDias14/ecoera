@@ -1,4 +1,4 @@
-package com.ecoera.model;
+package model;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
@@ -11,10 +11,13 @@ public class Troca {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     private String nomePessoa;
 
     private String contato;
+
+    private String descricao;
+
+    private String itemDesejado;
 
     @ManyToOne
     @JoinColumn(name = "material_id")
@@ -38,6 +41,12 @@ public class Troca {
 
     public String getContato() { return contato; }
     public void setContato(String contato) { this.contato = contato; }
+
+    public String getDescricao() { return descricao; }
+    public void setDescricao(String descricao) { this.descricao = descricao; }
+
+    public String getItemDesejado() { return itemDesejado; }
+    public void setItemDesejado(String itemDesejado) { this.itemDesejado = itemDesejado; }
 
     public TipoMaterial getMaterial() { return material; }
     public void setMaterial(TipoMaterial material) { this.material = material; }

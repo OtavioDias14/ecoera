@@ -1,7 +1,9 @@
-package com.ecoera.controller;
+package controller;
 
-import com.ecoera.model.TipoMaterial;
-import com.ecoera.service.TipoMaterialService;
+import model.TipoMaterial;
+
+import service.TipoMaterialService;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function ErrorBoundary({ fallback }) {
+export default function ErrorBoundary({ children, fallback }) {
   const [hasError, setHasError] = useState(false);
 
   if (hasError) {
@@ -19,5 +19,5 @@ export default function ErrorBoundary({ fallback }) {
     );
   }
 
-  return null;
+  return children;
 }

@@ -1,8 +1,9 @@
-package com.ecoera.service;
+package service;
 
-import com.ecoera.model.Troca;
-import com.ecoera.repository.TrocaRepository;
 import org.springframework.stereotype.Service;
+
+import model.Troca;
+import repository.TrocaRepository;
 
 import java.time.LocalDate;
 import java.util.List;

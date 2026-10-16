@@ -1,4 +1,4 @@
-package com.ecoera.model;
+package model;
 
 import jakarta.persistence.*;
 import java.util.List;
@@ -32,7 +32,7 @@ public class PontoReciclagem {
             joinColumns = @JoinColumn(name = "ponto_id"),
             inverseJoinColumns = @JoinColumn(name = "material_id")
     )
-    private List<com.ecoera.model.TipoMaterial> materiais;
+    private List<TipoMaterial> materiais;
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -56,6 +56,7 @@ public class PontoReciclagem {
     public void setLongitude(String longitude) { this.longitude = longitude; }
     public String getDescricao() { return descricao; }
     public void setDescricao(String descricao) { this.descricao = descricao; }
-    public List<com.ecoera.model.TipoMaterial> getMateriais() { return materiais; }
-    public void setMateriais(List<com.ecoera.model.TipoMaterial> materiais) { this.materiais = materiais; }
+    public List<TipoMaterial> getMateriais() { return materiais; }
+    @SuppressWarnings("unchecked")
+    public void setMateriais(Object materiais) { this.materiais = (List<TipoMaterial>) materiais; }
 }

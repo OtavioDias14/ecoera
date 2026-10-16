@@ -1,11 +1,16 @@
-package com.ecoera.controller;
+package controller;
 
-import com.ecoera.repository.PontoReciclagemRepository;
-import com.ecoera.repository.TipoMaterialRepository;
-import com.ecoera.repository.TrocaRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import repository.PontoReciclagemRepository;
+import repository.TipoMaterialRepository;
+import repository.TrocaRepository;
+
+import model.PontoReciclagem;
+import model.TipoMaterial;
+import model.Troca;
 
 import java.util.HashMap;
 import java.util.Map;

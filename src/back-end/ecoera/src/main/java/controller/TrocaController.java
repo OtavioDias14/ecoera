@@ -1,9 +1,10 @@
-package com.ecoera.controller;
+package controller;
 
-import com.ecoera.model.Troca;
-import com.ecoera.service.TrocaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import model.Troca;
+import service.TrocaService;
 
 import java.util.List;
 

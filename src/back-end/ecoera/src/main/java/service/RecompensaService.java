@@ -1,7 +1,7 @@
-package com.ecoera.service;
+package service;
 
-import com.ecoera.model.Recompensa;
-import com.ecoera.repository.RecompensaRepository;
+import model.Recompensa;
+import repository.RecompensaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.ecoera.model;
+package model;
 
 import jakarta.persistence.*;
 

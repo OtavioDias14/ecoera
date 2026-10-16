@@ -14,18 +14,21 @@ const NovoItem = () => {
     setCarregando(true);
 
     const novoItem = {
-      nome,
-      descricao,
-      itemDesejado
+      nomePessoa: nome,
+      descricao: descricao || "",
+      itemDesejado: itemDesejado || "",
+      quantidade: 1,
+      status: "PENDENTE"
     };
 
     try {
-      await api.post("/api/v1/trocas", novoItem);
+      await api.post("/api/trocas", novoItem);
       alert("Item cadastrado com sucesso!");
       navigate("/trocas");
     } catch (error) {
       console.error("Erro ao cadastrar item:", error);
-      alert("Erro ao cadastrar item. Verifique os dados e tente novamente.");
+      const msg = error.response?.data?.message || error.message || "Erro ao cadastrar item. Verifique os dados e tente novamente.";
+      alert(msg);
     } finally {
       setCarregando(false);
     }

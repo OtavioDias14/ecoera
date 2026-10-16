@@ -1,9 +1,11 @@
-package com.ecoera.controller;
+package controller;
 
-import com.ecoera.model.Recompensa;
-import com.ecoera.service.RecompensaService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import model.Recompensa;
+import service.RecompensaService;
 
 import java.util.List;
 
@@ -23,8 +25,13 @@ public class RecompensaController {
     }
 
     @GetMapping("/{id}")
-    public Recompensa buscarPorId(@PathVariable Long id) {
-        return service.buscarPorId(id);
+    public ResponseEntity<Recompensa> buscarPorId(@PathVariable Long id) {
+        try {
+            return ResponseEntity.ok(service.buscarPorId(id));
+        } catch (RuntimeException e) {
+            // O serviço lança RuntimeException quando a recompensa năo existe
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping

@@ -1,8 +1,9 @@
-package com.ecoera.repository;
+package repository;
 
-import com.ecoera.model.PontoReciclagem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import model.PontoReciclagem;
 
 import java.util.List;
 
@@ -10,4 +11,5 @@ import java.util.List;
 public interface PontoReciclagemRepository extends JpaRepository<PontoReciclagem, Long> {
     List<PontoReciclagem> findByCidade(String cidade);
     List<PontoReciclagem> findByNomeContainingIgnoreCase(String nome);
+    PontoReciclagem save(PontoReciclagem ponto);
 }

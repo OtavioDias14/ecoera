@@ -11,7 +11,7 @@ const EditarItem = () => {
   const [itemDesejado, setItemDesejado] = useState("");
 
   useEffect(() => {
-    api.get(`/trocas/${id}`)
+    api.get(`/api/trocas/${id}`)
       .then((response) => {
         const dados = response.data.data;
         setNome(dados.nome);
@@ -24,7 +24,7 @@ const EditarItem = () => {
   const atualizarItem = async (e) => {
     e.preventDefault();
     try {
-      await api.put(`/trocas/${id}`, {
+      await api.put(`/api/trocas/${id}`, {
         nome,
         descricao,
         itemDesejado,

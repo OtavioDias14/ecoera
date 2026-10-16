@@ -1,7 +1,9 @@
-package com.ecoera.service;
+package service;
 
-import com.ecoera.model.PontoReciclagem;
-import com.ecoera.repository.PontoReciclagemRepository;
+import model.PontoReciclagem;
+
+import repository.PontoReciclagemRepository;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;

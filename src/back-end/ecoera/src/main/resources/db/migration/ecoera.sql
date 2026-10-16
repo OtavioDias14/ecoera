@@ -74,6 +74,8 @@ CREATE TABLE trocas
    id			      INT			IDENTITY,
    nome_pessoa	   VARCHAR(255)	NOT NULL,
    contato		   VARCHAR(200)    NULL,
+   descricao		VARCHAR(MAX)	NULL,
+   item_desejado	VARCHAR(MAX)	NULL,
    material_id	   INT			    NULL,
    quantidade	   DECIMAL(18,2)   NULL,
    ponto_id		   INT			    NULL,
