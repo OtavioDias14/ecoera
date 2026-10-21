@@ -71,11 +71,7 @@ const Login = () => {
             <i className="fas fa-sign-in-alt me-2"></i>Entrar
           </button>
 
-          <div className="text-center">
-            <small className="text-muted">
-              Ainda não tem uma conta? <Link to="/CadastroPage" className="text-success fw-semibold text-decoration-none">Cadastre-se</Link>
-            </small>
-          </div>
+          
         </form>
 
       </div>
